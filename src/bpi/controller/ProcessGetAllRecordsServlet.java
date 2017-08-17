@@ -18,9 +18,9 @@ public class ProcessGetAllRecordsServlet extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection connection = new ForexBean().getConnection(
-				getServletConfig().getInitParameter("jdbcUrl"),
-				getServletConfig().getInitParameter("dbUsername"),
-				getServletConfig().getInitParameter("dbPassword"));
+				getServletContext().getInitParameter("jdbcUrl"),
+				getServletContext().getInitParameter("dbUsername"),
+				getServletContext().getInitParameter("dbPassword"));
 		
 		
 		ResultSet records =

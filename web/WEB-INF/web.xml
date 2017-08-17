@@ -10,37 +10,29 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <context-param>
+  <param-name>jdbcUrl</param-name>
+  		<param-value>jdbc:mysql://localhost:3306/ticzon-entjav2-se31-db</param-value>
+  
+  </context-param>
+   <context-param>
+  		<param-name>dbUsername</param-name>
+  		<param-value>root</param-value>
+  
+  </context-param>
+     <context-param>
+  		<param-name>dbPassword</param-name>
+  		<param-value></param-value>
+  </context-param>
+  
+  
   <servlet>
   	<servlet-name>ProcessCurrencyExchangeConversionServlet</servlet-name>
   	<servlet-class>bpi.controller.ProcessCurrencyExchangeConversionServlet</servlet-class>
-  	<init-param>
-  		<param-name>jdbcUrl</param-name>
-  		<param-value>jdbc:mysql://localhost:3306/ticzon-entjav2-se31-db</param-value>
-  	</init-param>
-  	<init-param>
-  		<param-name>dbUsername</param-name>
-  		<param-value>root</param-value>
-  	</init-param>
-  		<init-param>
-  		<param-name>dbPassword</param-name>
-  		<param-value></param-value>
-  	</init-param>
   </servlet>
   <servlet>
   	<servlet-name>ProcessGetAllRecordsServlet</servlet-name>
   	<servlet-class>bpi.controller.ProcessGetAllRecordsServlet</servlet-class>
-  	<init-param>
-  		<param-name>jdbcUrl</param-name>
-  		<param-value>jdbc:mysql://localhost:3306/ticzon-entjav2-se31-db</param-value>
-  	</init-param>
-  	<init-param>
-  		<param-name>dbUsername</param-name>
-  		<param-value>root</param-value>
-  	</init-param>
-  		<init-param>
-  		<param-name>dbPassword</param-name>
-  		<param-value></param-value>
-  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>ProcessCurrencyExchangeConversionServlet</servlet-name>

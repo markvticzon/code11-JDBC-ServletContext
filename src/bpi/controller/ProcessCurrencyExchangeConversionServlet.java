@@ -24,14 +24,15 @@ public class ProcessCurrencyExchangeConversionServlet extends HttpServlet {
 	String dbUsername = null;
 	String dbPassword = null;
 	
-	public void init(ServletConfig config)throws ServletException{
-		super.init(config);
+	public void init()throws ServletException{
 		
-		jdbcUrl = config.getInitParameter("jdbcUrl");
-		dbUsername = config.getInitParameter("dbUsername");
-		dbPassword = config.getInitParameter("dbPassword");
+		
+		jdbcUrl = getServletContext().getInitParameter("jdbcUrl");
+		dbUsername = getServletContext().getInitParameter("dbUsername");
+		dbPassword = getServletContext().getInitParameter("dbPassword");
 		
 		connection = new ForexBean().getConnection(jdbcUrl, dbUsername, dbPassword);
+		getServletContext().setAttribute("dbconn", connection);
 	}
 	
 	
